@@ -2,7 +2,7 @@
 
 Longer video link: https://www.youtube.com/watch?v=AuhUiFYnn-M
 
-# Documentation for Team 13 Community Building Week
+# Documentation
 
 ## Members of the Team
 * Mattheus S. (Team Lead, DVT Lead)
