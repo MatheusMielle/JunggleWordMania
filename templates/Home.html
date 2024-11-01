@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Word Mania</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/webp" href="{{ url_for('static', filename='elephant_mascot.webp') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Luckiest+Guy" /> Luckiest Guy Font -->
+</head>
+
+<body style="background-image: url('/static/home_back.webp');">
+    <h1 align="center">
+        <img class = "title" src= "{{ url_for('static', filename='title.png') }}" alt="title Jungle Word Mania" />
+        <form autocomplete="off">
+            <button id ="singleplayer" type="submit" formaction="SinglePlayerSettings">Play!</button><br>
+            <button id = "createclass" type="submit" formaction="CreateClassroom">Create Game</button><br>
+            <button id = "howto" type="submit" formaction = "HowToPlay">How to Play</button><br>
+            <input id = "joinclass" class="codeclass" type="submit" value="Join Game" formaction="JoinGame"><br>
+        </form>
+    </h1>
+</body>
+</html>

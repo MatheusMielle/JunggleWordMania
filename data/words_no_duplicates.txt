@@ -1,0 +1,247 @@
+dog|A furry animal that barks|1st Grade
+cat|A furry animal that meows|1st Grade
+sun|A big ball of fire in the sky|1st Grade
+moon|A round object in the sky that shines at night|1st Grade
+tree|A tall plant with branches and leaves|1st Grade
+happy|Feeling good and joyful|1st Grade
+sad|Feeling unhappy or down|1st Grade
+big|Large in size|1st Grade
+small|Tiny in size|1st Grade
+play|To have fun and do something enjoyable|1st Grade
+jump|To move your legs quickly to go up in the air|2nd Grade
+laugh|To make a happy sound|2nd Grade
+friend|Someone you like and enjoy spending time with|2nd Grade
+color|A shade or hue like red, blue, or green|2nd Grade
+read|To look at words and understand their meaning|2nd Grade
+write|To use a pen or pencil to create letters and words|2nd Grade
+garden|A place where plants are grown|2nd Grade
+flower|A colorful part of a plant that often has a sweet smell|2nd Grade
+animal|A living creature that can move around|2nd Grade
+journey|A long trip or adventure|3rd Grade
+mystery|Something that is unknown or puzzling|3rd Grade
+imagine|To create a picture in your mind|3rd Grade
+discover|To find something new or unexpected|3rd Grade
+explore|To travel around and learn about a place|3rd Grade
+creative|Having the ability to come up with new ideas|3rd Grade
+solution|An answer to a problem|3rd Grade
+curious|Wanting to learn or know more|3rd Grade
+ancient|Very old or from long ago|3rd Grade
+culture|The customs, arts, and social institutions of a particular nation or people|4th Grade
+analyze|To examine something carefully to understand it|4th Grade
+evaluate|To judge the value or importance of something|4th Grade
+evidence|Facts or proof that support a claim|4th Grade
+experiment|A test to see what happens|4th Grade
+strategy|A plan for achieving a goal|4th Grade
+predict|To say what will happen in the future|4th Grade
+compare|To look for similarities and differences|4th Grade
+contrast|To show how things are different|4th Grade
+philosophy|The study of fundamental questions about existence, knowledge, and values|5th Grade
+psychology|The study of the mind and behavior|5th Grade
+sociology|The study of society and its structure|5th Grade
+economics|The study of how people make choices about scarce resources|5th Grade
+hypothesis|A testable explanation for an observation|5th Grade
+synthesis|The combination of different ideas to create something new|5th Grade
+perspective|A particular point of view|5th Grade
+analysis|The process of breaking something down into its parts|5th Grade
+abstract|Relating to ideas rather than concrete things|5th Grade
+red|A color like that of a ripe tomato.|1st Grade
+blue|A color like that of the sky.|1st Grade
+school|A place where children learn.|2nd Grade
+hungry|Wanting to eat.|2nd Grade
+thirsty|Wanting to drink.|2nd Grade
+funny|Making you laugh.|2nd Grade
+sleepy|Feeling tired and wanting to sleep.|2nd Grade
+quiet|Making little or no noise.|2nd Grade
+loud|Making a lot of noise.|2nd Grade
+beautiful|Very pleasing to look at.|2nd Grade
+adventure|An exciting and unusual experience.|3rd Grade
+powerful|Having a lot of strength or influence.|3rd Grade
+courage|The ability to face danger or difficulty.|3rd Grade
+celebrate|To mark a special occasion with a party or other activity.|3rd Grade
+delicious|Very tasty.|3rd Grade
+technology|The use of science and engineering to solve problems.|4th Grade
+environment|The natural world that surrounds us.|4th Grade
+government|The group of people who rule a country or state.|4th Grade
+economy|The system of how a country produces, distributes, and consumes goods and services.|4th Grade
+research|A systematic investigation into a subject in order to discover and examine new facts.|4th Grade
+sophisticated|Complex and refined.|5th Grade
+philosophical|Relating to the study of the fundamental nature of reality and existence.|5th Grade
+contemplate|To think deeply about something.|5th Grade
+optimistic|Hopeful and confident about the future.|5th Grade
+intriguing|Arousing curiosity or interest.|5th Grade
+nostalgia|A sentimental longing or wistful affection for the past.|5th Grade
+metamorphosis|A complete transformation or change in form.|5th Grade
+serendipity|The occurrence and development of events by chance in a happy or beneficial way.|5th Grade
+irony|A situation that is strange or amusing because something happens that is the opposite of what is expected.|5th Grade
+ball|A round object used for playing games.|1st grade
+house|A building where people live.|1st grade
+book|A collection of written pages bound together.|1st grade
+car|A vehicle with four wheels that people drive.|1st grade
+bird|An animal with wings that can fly.|1st grade
+water|A clear liquid that we drink.|1st grade
+rain|Water that falls from the sky.|1st grade
+smile|A happy expression on your face.|1st grade
+sleep|To rest your body and mind.|1st grade
+busy|Having a lot to do.|2nd grade
+brave|Not afraid.|2nd grade
+strong|Having a lot of power.|2nd grade
+kind|Gentle and caring.|2nd grade
+forest|A large area of trees.|3rd grade
+mountain|A large hill.|3rd grade
+river|A large stream of water.|3rd grade
+ocean|A large body of saltwater.|3rd grade
+planet|A large celestial body that orbits a star.|3rd grade
+history|The study of past events.|3rd grade
+science|The study of the natural world.|3rd grade
+famous|Well-known and admired.|3rd grade
+important|Having great significance.|3rd grade
+complex|Involving many different parts or elements.|4th Grade
+challenge|Something difficult to do.|4th Grade
+unique|One of a kind.|4th Grade
+influence|To have an effect on something or someone.|4th Grade
+observe|To watch carefully and notice details.|4th Grade
+interpret|To explain the meaning of something.|4th Grade
+synthesize|To combine different ideas or parts into a whole.|4th Grade
+run|To move quickly on foot|1st Grade
+sing|To make musical sounds with your voice|1st Grade
+eat|To put food in your mouth and swallow it|1st Grade
+story|A written or spoken account of something that happened|2nd Grade
+family|A group of people who are related to each other|2nd Grade
+weather|The state of the atmosphere at a particular time and place|3rd Grade
+season|One of the four periods of the year (spring, summer, autumn, winter)|3rd Grade
+country|A nation with its own government and territory|3rd Grade
+city|A large town|3rd Grade
+different|Not the same as something else|3rd Grade
+explain|To make something clear or easy to understand|3rd Grade
+problem|A situation that needs to be solved|4th Grade
+opinion|A personal view or belief|4th Grade
+describe|To say what something is like|4th Grade
+pretty|Pleasing to look at.|2nd Grade
+ugly|Unpleasant to look at.|2nd Grade
+question|A request for information.|3rd Grade
+answer|A response to a question.|3rd Grade
+similar|Having a resemblance.|3rd Grade
+dangerous|Risky or harmful.|3rd Grade
+excited|Feeling happy and eager.|3rd Grade
+bored|Feeling tired and lacking interest.|3rd Grade
+solve|To find the solution to a problem.|4th Grade
+civilization|A complex society with its own culture, laws, and institutions.|5th Grade
+democracy|A form of government where people have the power to choose their leaders.|5th Grade
+revolution|A major change or upheaval in society.|5th Grade
+pessimistic|Having a negative outlook on life.|5th Grade
+picture|An image that shows something.|2nd grade
+create|To make something new.|3rd grade
+conclusion|A final decision or judgment.|4th grade
+summarize|To give a brief overview of the main points.|4th grade
+society|A group of people living together with shared customs and laws.|5th grade
+innovation|A new idea or invention.|5th grade
+conservation|The protection and preservation of natural resources.|5th grade
+globalization|The process of the world becoming more connected.|5th grade
+rainbow|A colorful arc in the sky after rain.|2nd grade
+castle|A large, strong building with towers.|2nd grade
+whisper|To speak very softly.|2nd grade
+silly|Funny or foolish.|2nd grade
+gentle|Kind and soft.|2nd grade
+nervous|Feeling anxious or worried.|3rd grade
+amazing|Wonderful and impressive.|3rd grade
+geography|The study of Earth's features and people.|4th grade
+independent|Able to do things on your own.|4th grade
+persuade|To convince someone to do something.|4th grade
+consequence|The result or effect of an action.|4th grade
+intricate|Complex and detailed.|5th grade
+ambiguous|Having more than one possible meaning.|5th grade
+analogy|A comparison between two things that are alike in some way.|5th grade
+controversy|A disagreement or debate over something.|5th grade
+enigma|A mystery or puzzle.|5th grade
+because|For the reason that.|2nd grade
+learn|To gain knowledge or skill.|2nd grade
+invent|To create or design something new.|4th grade
+conclude|To reach a decision or opinion after considering all the facts.|4th grade
+evolution|The process of gradual change in living organisms over time.|5th grade
+statistics|The collection, organization, analysis, interpretation, and presentation of data.|5th grade
+literature|Written works, especially those considered of artistic or intellectual value.|5th grade
+believe|To think something is true|3rd grade
+ecosystem|A community of living things and their environment|4th grade
+parliament|A group of people who make laws for a country|4th grade
+tradition|A custom or belief passed down through generations|4th grade
+metaphor|A figure of speech comparing two unlike things|4th grade
+entrepreneur|Someone who starts and runs their own business|5th grade
+algorithm|A set of instructions for solving a problem|5th grade
+sustainable|Able to be maintained for a long time|5th grade
+butterfly|A beautiful insect with colorful wings.|2nd grade
+universe|All of space and everything in it.|3rd grade
+rhetoric|The art of effective or persuasive speaking or writing, especially the use of figures of speech and other compositional techniques.|5th grade
+cry|To shed tears, often as an expression of sadness or pain.|2nd grade
+inventor|A person who creates a new device, process, or technique.|4th grade
+sustainability|The ability to meet the needs of the present without compromising the ability of future generations to meet their own needs.|5th grade
+artificial intelligence|The theory and development of computer systems able to perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation.|5th grade
+fast|Moving or happening quickly.|2nd grade
+creature|A living being, especially an animal.|3rd grade
+mythology|The study of myths and legends.|4th grade
+innovative|Introducing new ideas or methods.|5th grade
+transformative|Causing a major change.|5th grade
+essential|Absolutely necessary.|4th grade
+transform|To change completely.|4th grade
+symbiosis|A relationship between two different organisms where both benefit.|5th grade
+phenomenon|A fact or event that is unusual or remarkable.|5th grade
+contemporary|Existing or happening in the same time period.|5th grade
+inevitable|Certain to happen.|5th grade
+dilemma|A difficult choice between two or more alternatives.|5th grade
+tall|High in height.|2nd grade
+short|Low in height.|2nd grade
+interesting|Capturing attention and holding interest.|3rd grade
+philosopher|Someone who studies wisdom and fundamental questions about life.|5th grade
+symbolism|The use of symbols to represent ideas or qualities.|5th grade
+inference|A conclusion reached on the basis of evidence and reasoning.|5th grade
+help|To assist someone in need.|2nd grade
+climate|The average weather conditions of a particular place over a long period of time.|4th grade
+biology|The study of living organisms|5th grade
+chemistry|The study of matter and its properties|5th grade
+physics|The study of matter, energy, and their interactions|5th grade
+mathematics|The study of numbers, quantities, and shapes|5th grade
+astronomy|The study of celestial objects and phenomena|5th grade
+dance|To move rhythmically to music.|2nd grade
+paradox|A seemingly absurd or self-contradictory statement or proposition that when investigated or explained may prove to be well-founded or true.|5th grade
+quickly|At a fast speed.|2nd grade
+slowly|At a slow speed.|2nd grade
+galaxy|A large system of stars, gas, and dust held together by gravity.|4th grade
+constellation|A group of stars that form a pattern in the sky.|4th grade
+gravity|The force that pulls objects towards each other.|4th grade
+allegory|A story with a hidden meaning or moral.|5th grade
+scary|Making you feel afraid.|2nd grade
+slow|Moving slowly.|2nd grade
+unusual|Not common or ordinary.|3rd grade
+eloquent|Fluent and persuasive in speaking or writing.|5th grade
+aesthetic|Relating to beauty and art.|5th grade
+storm|A violent disturbance in the atmosphere, often with heavy rain or snow.|2nd grade
+innovate|To introduce a new method, idea, or product.|4th grade
+collaborate|To work together with others on a project or task.|4th grade
+conundrum|A confusing and difficult problem or question.|5th grade
+treasure|Something valuable, especially gold or jewels.|3rd grade
+communicate|To share information with others.|4th grade
+inspire|To motivate or encourage someone to do something.|4th grade
+anthropology|The study of human societies and their cultures.|5th grade
+yellow|A color like the sun.|1st Grade
+purple|A color like grapes.|1st Grade
+fish|An animal that lives in water.|1st grade
+snake|A long, scaly reptile.|1st grade
+elephant|A large, gray animal with long ears and tusks.|1st grade
+giraffe|A tall animal with a long neck and spots.|1st grade
+zebra|An animal with black and white stripes.|1st grade
+lion|A large, tawny cat with a mane.|1st grade
+tiger|A large, striped cat with orange and black fur.|1st grade
+monkey|A small, furry animal with a tail.|1st grade
+orange|A color like carrots.|1st grade
+pink|A color like roses.|1st grade
+brown|A color like chocolate.|1st grade
+black|A color like night.|1st grade
+white|A color like snow.|1st grade
+green|A color like grass.|1st grade
+zoo|A place where people can see animals.|1st grade
+farm|A place where people grow food.|1st grade
+beach|A place where the ocean meets the land.|1st grade
+school|A place where children learn.|1st grade
+candy|A sweet treat made from sugar.|1st grade
+pizza|A round bread with cheese and sauce.|1st grade
+ice cream|A frozen dessert made from milk and cream.|1st grade
+river|A large stream of water that flows into the ocean.|3rd grade

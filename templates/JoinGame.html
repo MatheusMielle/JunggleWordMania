@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>EnterCode</title>
+    <link rel="icon" type="image/webp" href="{{ url_for('static', filename='elephant_mascot.webp') }}">
+</head>
+
+<body style="background-image: url('/static/join_class_back.webp');">
+        <h1>
+            Join Game
+        </h1>
+        <h1 align="center">
+            <form id="gameForm" method="post" onsubmit="return validate(event)" autocomplete="off">
+                <input class="username" id="name" name="username" placeholder="Username" required><br>
+                <input class="codeclass" id="code" name="code" placeholder="Enter Code" required><br>
+                <button id="Start" type="submit"><b>Start!</b></button><br>
+            </form>
+            <div id="error" style="display: none"></div>
+        </h1>
+    <script>
+        /**
+        * Validates the form input for a classroom game.
+        *
+        * This function prevents the default form submission behavior, collects the username 
+        * and game code from the form fields, and sends them to the server via a POST request. 
+        * It handles the server's response to either display an error message for an invalid code 
+        * or redirect the user to the game page if successful.
+        */
+        function validate(event) {
+            event.preventDefault();
+
+            const formData = new FormData();
+            const username = document.getElementById("name").value;
+            const code = document.getElementById("code").value;
+            formData.append('username', username);
+            formData.append('code', code);
+
+            fetch('/ClassroomGame', { method: "POST", body: formData })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.failed) {
+                        document.getElementById("error").textContent = "Invalid Code";
+                        document.getElementById("error").style.display = "block";
+                        document.getElementById("error").style.color = "red";
+
+                        // Hide the message after 5 seconds
+                        setTimeout(() => {
+                            document.getElementById("error").style.display = "none";
+                        }, 5000);
+                    } else {
+                        window.location.href = `/Game/${data.gameCode}/${data.player_id}`;
+                    }
+                });
+        }
+
+    </script>
+</body>
+
+</html>

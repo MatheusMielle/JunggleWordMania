@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Jungle Word Mania</title>
+    <link rel="icon" type="image/webp" href="{{ url_for('static', filename='elephant_mascot.webp') }}">
+</head>
+
+<body style="background-image: url('/static/game_back.webp');">
+    <div id="game_top_bar">
+        <div id="hint">
+            <button onclick="hint_function()" id="hint_button">
+                <img src="{{ url_for('static', filename='hint_image.png') }}" alt="Hint" id="hint_image">
+            </button>
+        </div>
+        <div id="words_left" class="top_bar_text">
+            Words Left: 20
+        </div>
+        <div id="score" class="top_bar_text">
+            <span id="time">Time: 00:00</span>
+        </div>
+    </div>
+
+    <div id="game_center_elements">
+        <div id="word_scramble">
+            <!-- Word will be updated dynamically -->
+            example_word
+        </div>
+        <div id="text_box">
+            <form id="guess_form" action="submit" method="post" onsubmit="return handleSubmit(event);" autocomplete="off">
+                <input type="text" id="guess" name="your_guess">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="whole_definition">
+            <div id="definition_label">
+                Definition:
+            </div>
+            <div id="definition">
+                <!-- Definition will be updated dynamically -->
+                example_definition
+            </div>
+        </div>
+        <!-- Button to go to leaderboard, initially hidden -->
+        <button id="leaderboard_button" style="display:none;" onclick="goToLeaderboard()">View Leaderboard</button>
+    </div>
+
+    <script>
+        let timer;
+        let timeInSeconds = 0;
+        let word_index = 0;
+        let correctWord = "";
+        let totalWords = 0;
+        const gameCode = "{{ game_code }}";
+        const player_id = "{{ player_id }}"
+
+        function startTimer() {
+            const timerElement = document.getElementById("time");
+            timer = setInterval(() => {
+                timeInSeconds++;
+                const minutes = Math.floor(timeInSeconds / 60).toString().padStart(2, '0');
+                const seconds = (timeInSeconds % 60).toString().padStart(2, '0');
+                timerElement.textContent = `Time: ${minutes}:${seconds}`;
+            }, 1000);
+        }
+
+        async function fetchWordAndDefinition() {
+            const response = await fetch(`/get_word_definition/${gameCode}/${word_index}`);
+            const data = await response.json();
+
+            correctWord = data.correct_word;  // Update the correct word for validation
+            totalWords = data.total_words;
+
+            // Update the scrambled word and definition on the page
+            document.getElementById("word_scramble").textContent = (data.scrambled_word).toUpperCase();
+            document.getElementById("definition").textContent = data.definition;
+            document.getElementById("words_left").textContent = `Words Left: ${data.words_left}`;
+        }
+
+        async function handleSubmit(event) {
+            event.preventDefault();  // Prevent form from submitting traditionally
+            const userGuess = document.getElementById("guess").value;
+
+            if (userGuess.toLowerCase() === correctWord.toLowerCase()) {
+                alert("Correct! Fetching new word...");
+                word_index++;
+                if (word_index != totalWords) {
+                    await fetchWordAndDefinition();
+                } else {
+                    clearInterval(timer)
+                    alert("No words left! Game over.");
+                    document.getElementById("words_left").textContent = 'Words Left: 0';
+                    document.getElementById("word_scramble").textContent = "Game Finished!";
+                    document.getElementById("definition").textContent = "";
+                    document.getElementById("guess").disabled = true;
+                    document.querySelector("input[type='submit']").disabled = true;
+                    await sendTimeToBackend();
+                    document.getElementById("leaderboard_button").style.display = 'block';
+                }
+            } else {
+                alert("Incorrect guess! Try again.");
+            }
+
+            document.getElementById("guess").value = "";
+        }
+
+        async function sendTimeToBackend() {
+            const response = await fetch(`/store_time`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ player_id: player_id, time: timeInSeconds }),  // Send game code and final time
+            });
+
+        }
+
+        function goToLeaderboard() {
+            window.location.href = `/leaderboard/${gameCode}`;
+        }
+
+        window.onload = function () {
+            startTimer();
+            fetchWordAndDefinition();
+        };
+    </script>
+</body>
+
+</html>

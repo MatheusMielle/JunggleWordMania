@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Create Classroom</title>
+    <link rel="icon" type="image/webp" href="{{ url_for('static', filename='elephant_mascot.webp') }}">
+</head>
+
+<body style="background-image: url('/static/create_class_back.webp');">
+    <h1>
+        Create Classroom
+    </h1>
+    <h1 align="center">
+        <form id="ClassroomSettings" autocomplete="off">
+            <input type="file" class="gamefile" id="myfile" accept=".txt,.csv">
+            OR<br>
+            <label for="numberofwords" style="font-size: 36px;">Number of Words</label>
+            <select name="numberofwords" id="numberofwords">
+                <option value="05">05</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+            </select><br>
+            <label for="difficulty" style="font-size: 36px;">Difficulty</label>
+            <select name="difficulty" id="difficulty">
+                <option value="1st grade">1st Grade</option>
+                <option value="2nd grade">2nd Grade</option>
+                <option value="3rd grade">3rd Grade</option>
+                <option value="4th grade">4th Grade</option>
+                <option value="5th grade">5th Grade</option>
+            </select><br>
+            <p id="showtext" style='display: none'>CODE GOES HERE</p>
+            <button id='createcode' type='button' onclick="showText()">Create Code</button>
+        </form>
+    </h1>
+    <script>
+        function showText() {
+            const file = document.getElementById('myfile');
+            const formData = new FormData();
+
+            // Verify if file was uploaded
+            // If so POST file
+            // If not, POST words and Difficulty info
+            if (file.files.length > 0) {
+                formData.append('file', file.files[0]);
+            } else {
+                const numberOfWords = document.getElementById('numberofwords').value;
+                const difficulty = document.getElementById('difficulty').value;
+                formData.append('numberofwords', numberOfWords);
+                formData.append('difficulty', difficulty);
+            }
+
+            fetch('/generateGameCode', { method: "POST", body: formData })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById("showtext").innerText = data.gameCode;
+                        document.getElementById("showtext").style.display = "block";
+                        document.getElementById("showtext").style.color = "black";
+                        // Change button to "View Leaderboard" and add click event
+                        const createCodeButton = document.getElementById('createcode');
+                        createCodeButton.innerText = "View Leaderboard";
+                        createCodeButton.onclick = function() {
+                            window.location.href = `/leaderboard/${data.gameCode}`;
+                        };
+                    } else {
+                        document.getElementById("showtext").innerText = data.error;
+                        document.getElementById("showtext").style.display = "block";
+                        document.getElementById("showtext").style.color = "red";
+                        file.value = '';
+                    }
+                });
+        }
+    </script>
+</body>
+
+</html>

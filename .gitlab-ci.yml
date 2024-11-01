@@ -1,0 +1,53 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_TLS_CERTDIR: ""
+  CI_REGISTRY_IMAGE: whitgit.whitworth.edu/2024/community-building-week/project-polygon
+  IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-$CI_PIPELINE_IID
+
+stages:
+  - build
+  - approval
+  - trigger
+
+before_script:
+  - echo "Running Docker Info"
+  - docker info
+  - echo "Logging into GitLab Container Registry"
+  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+
+build:
+  stage: build
+  script:
+    - echo "Building Docker Image"
+    - docker build --pull -t $IMAGE .
+    - echo "Listing Docker Images"
+    - docker images
+    - echo "Inspecting Docker Image Layers"
+    - docker history $IMAGE
+    - echo "Pushing Docker Image to Registry"
+    - docker push $IMAGE || { echo "Docker push failed"; docker images; docker inspect $IMAGE; exit 1; }
+    - echo "This build needs manual approval before deployment."
+  only:
+    - release
+
+approval:
+  stage: approval
+  script:
+    - echo "Manual approval has been granted for downstream deployment. Triggering deployment now..."
+  when: manual
+  allow_failure: false
+
+trigger_deploy:
+  stage: trigger
+  trigger:
+    project: whitcloud/production/community-building-week/2024/project-polygon-chart
+    branch: main
+    strategy: depend
+  variables:
+    DEPLOY_IMAGE_TAG: $CI_COMMIT_REF_SLUG-$CI_PIPELINE_IID
+  only:
+    - release

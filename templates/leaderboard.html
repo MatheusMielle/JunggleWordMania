@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Leaderboard - Jungle Word Mania</title>
+    <link rel="icon" type="image/webp" href="{{ url_for('static', filename='elephant_mascot.webp') }}">
+</head>
+
+<body style="background-image: url('/static/leaderboard_back.webp');">
+    <div id="home_button">
+        <button onclick="location.href='/'" id="home_button_element">Home</button>
+    </div>
+    <div id="leaderboard_container">
+        <h1>Leaderboard</h1>
+        <h2>{% if game_code.startswith('C') %}
+            Game Code: {{ game_code }}
+        {% endif %}</h2>
+        <table id="leaderboard_table">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Player Name</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard_body">
+                <!-- Leaderboard entries will be dynamically populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const gameCode = "{{ game_code }}";
+
+        async function fetchLeaderboard() {
+            const response = await fetch(`/get_leaderboard/${gameCode}`);
+            const leaderboardData = await response.json();
+
+            const leaderboardBody = document.getElementById("leaderboard_body");
+            leaderboardBody.innerHTML = ""; // Clear existing entries
+
+            leaderboardData.forEach((entry, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${index + 1}</td><td>${entry.player_name}</td><td>${entry.time}</td>`;
+                leaderboardBody.appendChild(row);
+            });
+        }
+
+        // Fetch leaderboard every 5 seconds
+        setInterval(fetchLeaderboard, 5000);
+
+        // Initial load of leaderboard when the page is loaded
+        window.onload = function () {
+            fetchLeaderboard();
+        };
+    </script>
+</body>
+
+</html>
